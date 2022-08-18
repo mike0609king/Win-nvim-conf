@@ -1,6 +1,6 @@
 \usepackage[simplified]{pgf-umlcd}
 
-\renewenvironment{package}[2][\umlcdPackageTitle]{
+\newenvironment{package}[2][\umlcdPackageTitle]{
 \edef\umlcdPackageTitle{#2}
 \def\umlcdPackageFit{}
 \def\umlcdPackageName{#1}
@@ -24,19 +24,19 @@
   \end{pgfonlayer}
 }
 
-\renewcommand{\unidirectionalAssociation}[4]{
+\newcommand{\unidirectionalAssociation}[4]{
   \draw [umlcd style, ->] (#1) -- (#4)
     node[near end, auto,align=center]{#2}
     node[near end, auto,swap,align=center]{#3};
 }
 
-\renewcommand{\aggregation}[4]{
+\newcommand{\aggregation}[4]{
   \draw [umlcd style, -{Diamond[fill=white,scale=1.3]}] (#1) -- (#4)
     node[near end, auto,align=center]{#2}
     node[near end, auto,swap,align=center]{#3};
 }
 
-\renewcommand{\composition}[4]{
+\newcommand{\composition}[4]{
   \draw [umlcd style, -{Diamond[fill=black,black,scale=1.3]}] (#1) -- (#4)
     node[near end, auto,align=center]{#2}
     node[near end, auto,swap,align=center]{#3};
