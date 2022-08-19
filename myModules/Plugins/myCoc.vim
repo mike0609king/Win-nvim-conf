@@ -20,6 +20,7 @@ let g:coc_global_extensions = [
     \ 'coc-cssmodules',
     \ 'coc-tsserver',
     \ 'coc-flutter',
+    \ 'coc-clangd'
     \]
 
 " coc-pairs
